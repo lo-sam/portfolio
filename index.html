@@ -255,96 +255,98 @@
 
     </footer>
     <script>
-        // Remove the transition class
-        const rapide = document.querySelector('#rapide');
-        const student = document.querySelector('.diplome');
-        const parcG = document.querySelector('.parcGauche');
-        const parcD = document.querySelector('.parcDroite');
-        const pre1 = document.querySelector('.pre1');
-        const pre2 = document.querySelector('.pre2');
-        const pre3 = document.querySelector('.pre3');
-        const lang1 = document.querySelector('.lang1');
-        const lang2 = document.querySelector('.lang2');
-        const lang3 = document.querySelector('.lang3');
-        const lang4 = document.querySelector('.lang4');
-        const lang5 = document.querySelector('.lang5');
-        const lang6 = document.querySelector('.lang6');
-        const lang7 = document.querySelector('.lang7');
-        const lang8 = document.querySelector('.lang8');
-        const lang9 = document.querySelector('.lang9');
-        rapide.classList.remove('rapide-transition');
-        student.classList.remove('animZoom');
-        parcG.classList.remove('parcG-transition');
-        parcD.classList.remove('parcD-transition');
-        pre1.classList.remove('pre');
-        pre2.classList.remove('pre');
-        pre3.classList.remove('pre');
-        lang1.classList.remove('lang1');
-        lang2.classList.remove('lang2');
-        lang3.classList.remove('lang3');
-        lang4.classList.remove('lang4');
-        lang5.classList.remove('lang5');
-        lang6.classList.remove('lang6');
-        lang7.classList.remove('lang7');
-        lang8.classList.remove('lang8');
-        lang9.classList.remove('lang9');
+        if ($(window).width() > 768) {
 
-        // Create the observer, same as before:
-        const observer0 = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    rapide.classList.add('rapide-transition');
-                    return;
-                }
-                rapide.classList.remove('rapide-transition');
+            // Remove the transition class
+            const rapide = document.querySelector('#rapide');
+            const student = document.querySelector('.diplome');
+            const parcG = document.querySelector('.parcGauche');
+            const parcD = document.querySelector('.parcDroite');
+            const pre1 = document.querySelector('.pre1');
+            const pre2 = document.querySelector('.pre2');
+            const pre3 = document.querySelector('.pre3');
+            const lang1 = document.querySelector('.lang1');
+            const lang2 = document.querySelector('.lang2');
+            const lang3 = document.querySelector('.lang3');
+            const lang4 = document.querySelector('.lang4');
+            const lang5 = document.querySelector('.lang5');
+            const lang6 = document.querySelector('.lang6');
+            const lang7 = document.querySelector('.lang7');
+            const lang8 = document.querySelector('.lang8');
+            const lang9 = document.querySelector('.lang9');
+            rapide.classList.remove('rapide-transition');
+            student.classList.remove('animZoom');
+            parcG.classList.remove('parcG-transition');
+            parcD.classList.remove('parcD-transition');
+            pre1.classList.remove('pre');
+            pre2.classList.remove('pre');
+            pre3.classList.remove('pre');
+            lang1.classList.remove('lang1');
+            lang2.classList.remove('lang2');
+            lang3.classList.remove('lang3');
+            lang4.classList.remove('lang4');
+            lang5.classList.remove('lang5');
+            lang6.classList.remove('lang6');
+            lang7.classList.remove('lang7');
+            lang8.classList.remove('lang8');
+            lang9.classList.remove('lang9');
+
+            // Create the observer, same as before:
+            const observer0 = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        rapide.classList.add('rapide-transition');
+                        return;
+                    }
+                    rapide.classList.remove('rapide-transition');
+                });
             });
-        });
-        const observer1 = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    student.classList.add('animZoom');
-                    parcG.classList.add('parcG-transition');
-                    parcD.classList.add('parcD-transition');
-                    pre1.classList.add('pre1');
-                    pre2.classList.add('pre2');
-                    pre3.classList.add('pre3');
-                    lang1.classList.add('lang1');
-                    lang2.classList.add('lang2');
-                    lang3.classList.add('lang3');
-                    lang4.classList.add('lang4');
-                    lang5.classList.add('lang5');
-                    lang6.classList.add('lang6');
-                    lang7.classList.add('lang7');
-                    lang8.classList.add('lang8');
-                    lang9.classList.add('lang9');
-                    return;
-                }
-                student.classList.remove('animZoom');
-                parcG.classList.remove('parcG-transition');
-                parcD.classList.remove('parcD-transition');
-                pre1.classList.remove('pre1');
-                pre2.classList.remove('pre2');
-                pre3.classList.remove('pre3');
-                lang1.classList.remove('lang1');
-                lang2.classList.remove('lang2');
-                lang3.classList.remove('lang3');
-                lang4.classList.remove('lang4');
-                lang5.classList.remove('lang5');
-                lang6.classList.remove('lang6');
-                lang7.classList.remove('lang7');
-                lang8.classList.remove('lang8');
-                lang9.classList.remove('lang9');
+            const observer1 = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        student.classList.add('animZoom');
+                        parcG.classList.add('parcG-transition');
+                        parcD.classList.add('parcD-transition');
+                        pre1.classList.add('pre1');
+                        pre2.classList.add('pre2');
+                        pre3.classList.add('pre3');
+                        lang1.classList.add('lang1');
+                        lang2.classList.add('lang2');
+                        lang3.classList.add('lang3');
+                        lang4.classList.add('lang4');
+                        lang5.classList.add('lang5');
+                        lang6.classList.add('lang6');
+                        lang7.classList.add('lang7');
+                        lang8.classList.add('lang8');
+                        lang9.classList.add('lang9');
+                        return;
+                    }
+                    student.classList.remove('animZoom');
+                    parcG.classList.remove('parcG-transition');
+                    parcD.classList.remove('parcD-transition');
+                    pre1.classList.remove('pre1');
+                    pre2.classList.remove('pre2');
+                    pre3.classList.remove('pre3');
+                    lang1.classList.remove('lang1');
+                    lang2.classList.remove('lang2');
+                    lang3.classList.remove('lang3');
+                    lang4.classList.remove('lang4');
+                    lang5.classList.remove('lang5');
+                    lang6.classList.remove('lang6');
+                    lang7.classList.remove('lang7');
+                    lang8.classList.remove('lang8');
+                    lang9.classList.remove('lang9');
 
 
+                });
             });
-        });
 
-        observer0.observe(document.querySelector('#rapide'));
-        observer1.observe(document.querySelector('.diplome'));
-        observer1.observe(document.querySelector('.histoire'));
-        observer1.observe(document.querySelector('.prepa'));
-        observer1.observe(document.querySelector('.lang'));
-
+            observer0.observe(document.querySelector('#rapide'));
+            observer1.observe(document.querySelector('.diplome'));
+            observer1.observe(document.querySelector('.histoire'));
+            observer1.observe(document.querySelector('.prepa'));
+            observer1.observe(document.querySelector('.lang'));
+        }
 
 
         $(document).ready(function() {
